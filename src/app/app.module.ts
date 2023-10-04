@@ -9,6 +9,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProjectListPageComponent } from './pages/project-list-page/project-list-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
     HomePageComponent,
     ProjectListPageComponent,
     ContactPageComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    PageNotFoundComponent,
+    ProjectCardComponent
   ],
   imports: [
     BrowserModule,
