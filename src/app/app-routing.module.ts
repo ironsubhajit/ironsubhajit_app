@@ -5,11 +5,13 @@ import { ProjectListPageComponent } from './pages/project-list-page/project-list
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'page-not-found', component: PageNotFoundComponent },
   { path: 'projects', component: ProjectListPageComponent },
+  { path: 'project-detail', component: ProjectDetailComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

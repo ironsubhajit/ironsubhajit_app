@@ -11,6 +11,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ProjectCardComponent } from './components/project-card/project-card.com
     ContactPageComponent,
     AboutPageComponent,
     PageNotFoundComponent,
-    ProjectCardComponent
+    ProjectCardComponent,
+    ProjectDetailComponent
   ],
   imports: [
     BrowserModule,
