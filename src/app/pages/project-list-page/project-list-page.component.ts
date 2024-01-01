@@ -17,10 +17,10 @@ export class ProjectListPageComponent {
   }
 
   getProjectList(): void {
-    this.projectList = this.projectService.getProjects();
+    this.projectList = this.projectService?.getProjects();
   }
   
   trackByFn(index: number, project: Project) {
-    return project._id
+    return index
   }
 }

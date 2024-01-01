@@ -7,8 +7,7 @@ import { Project } from 'src/app/interfaces/project';
   styleUrls: ['./project-card.component.scss'],
 })
 export class ProjectCardComponent {
-  projectTitle: string = 'Project Title';
-  @Input() project!: Project;
+  @Input() project: Project | null = null;
 
   constructor() {}
 }
