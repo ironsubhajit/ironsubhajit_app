@@ -3,7 +3,7 @@
 export interface Project {
   _id: string;
   title: string;
-  date_created: string;
+  date_modified: string;
   content: string;
   live_link: string;
   repo_link: string;

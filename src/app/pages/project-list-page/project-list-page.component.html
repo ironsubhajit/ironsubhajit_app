@@ -1,6 +1,11 @@
 <div class="container mt-2">
   <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-    <div class="col">
+    <!-- Looping over the project list -->
+
+    <div *ngFor="let project of projectList; index as i; trackBy: trackByFn" class="col">
+      <ironsubhajit-project-card [project]="project"></ironsubhajit-project-card>
+    </div>
+    <!-- <div class="col">
       <ironsubhajit-project-card></ironsubhajit-project-card>
     </div>
     <div class="col">
@@ -11,9 +16,6 @@
     </div>
     <div class="col">
       <ironsubhajit-project-card></ironsubhajit-project-card>
-    </div>
-    <div class="col">
-      <ironsubhajit-project-card></ironsubhajit-project-card>
-    </div>
+    </div> -->
   </div>
 </div>
