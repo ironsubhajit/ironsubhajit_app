@@ -12,6 +12,9 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
+import { CustomTextComponent } from './components/custom-text/custom-text.component';
+import { RactCardComponent } from './components/ract-card/ract-card.component';
+import { SquareCardComponent } from './components/square-card/square-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
     AboutPageComponent,
     PageNotFoundComponent,
     ProjectCardComponent,
-    ProjectDetailComponent
+    ProjectDetailComponent,
+    CustomTextComponent,
+    RactCardComponent,
+    SquareCardComponent
   ],
   imports: [
     BrowserModule,

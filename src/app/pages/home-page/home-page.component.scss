@@ -1,0 +1,46 @@
+@import "src/colors.scss";
+
+ironsubhajit-project-card {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-banner {
+  // background-color: $dark-gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  width: 50%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  // background-color: rgb(12, 100, 208);
+}
+
+.title-text-style {
+  line-height: 1.5;
+  color: $white;
+}
+
+
+.banner-image {
+  width: 50%;
+  // background-color: rgb(118, 118, 215);
+}
+
+.img-style {
+  width: 520px;
+}
+
+.domain-container {
+  background-color: transparent;
+  width: 100%;
+  margin-top: 1.25rem;
+  // border: 2px solid green;
+}

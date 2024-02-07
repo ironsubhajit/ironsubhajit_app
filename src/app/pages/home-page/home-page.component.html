@@ -1,1 +1,99 @@
-<p>home-page works!</p>
+<div class="container my-2">
+  <div class="welcome-banner">
+    <div class="banner-title">
+      <p class="title-text-style">
+        The value of an <span class="purple-color">idea</span> lies <br />
+        in the using of it.
+      </p>
+    </div>
+    <div class="banner-image">
+      <img class="img-style" [src]="imagePath" alt="welcome-image" />
+    </div>
+  </div>
+
+  <!-- multiple domain areas container -->
+  <div class="domain-container">
+    <p class="title-text-style font-1">
+      Powerful <span class="aqua-green-text">features</span> to <br />
+      fuel our success
+    </p>
+    <div style="display: flex; flex-direction: row">
+      <!-- coloum 1 -->
+      <div style="display: flex; flex-direction: column">
+        <!-- row 1 -->
+        <div style="width: fit-content; display: flex">
+          <ironsubhajit-ract-card
+            cardTitle="website developement projects"
+            btnText="explore web projects"
+            style="margin-right: 20px"
+          ></ironsubhajit-ract-card>
+          <ironsubhajit-square-card
+            cardTitle="java projects"
+            btnText="explore java projects"
+            style="margin-right: 20px"
+          ></ironsubhajit-square-card>
+        </div>
+        <!-- row 2 -->
+        <div style="width: fit-content; display: flex">
+          <ironsubhajit-square-card
+            cardTitle="python projects"
+            btnText="explore python projects"
+            style="margin-right: 20px"
+          ></ironsubhajit-square-card>
+          <ironsubhajit-ract-card
+            cardTitle="Artificial Intellegence projects"
+            btnText="explore AI projects"
+            style="margin-right: 20px"
+          ></ironsubhajit-ract-card>
+        </div>
+        <!-- row 3 -->
+        <div style="width: fit-content; display: flex">
+          <ironsubhajit-ract-card
+            cardTitle="machine learning projects"
+            btnText="explore ml projects"
+            style="margin-right: 20px"
+          ></ironsubhajit-ract-card>
+          <ironsubhajit-square-card
+            cardTitle="analytics projects"
+            btnText="explore analytic projects"
+            style="margin-right: 20px"
+          ></ironsubhajit-square-card>
+        </div>
+      </div>
+      <!-- coloum 2 -->
+      <div style="width: fit-content; display: flex; flex-direction: column">
+        <ironsubhajit-square-card
+          cardTitle="Mobile app projects"
+          btnText="explore mob projects"
+          [parentDivStyle]="{ height: '26.25rem' }"
+        ></ironsubhajit-square-card>
+        <ironsubhajit-square-card
+          cardTitle="consultant projects"
+          btnText="explore consultancy"
+        ></ironsubhajit-square-card>
+      </div>
+    </div>
+  </div>
+
+  <!-- services -->
+  <div class="services-carosel">
+    
+  </div>
+
+  <!-- footer -->
+
+
+  <!-- Looping over the project list -->
+  <!-- <div
+      *ngFor="
+        let project of projectList | slice : 0 : 4;
+        index as i;
+        trackBy: trackByFn
+      "
+      class="col"
+    >
+      <ironsubhajit-project-card
+        [project]="project"
+      ></ironsubhajit-project-card>
+    </div> -->
+</div>

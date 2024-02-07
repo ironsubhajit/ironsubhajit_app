@@ -1,0 +1,46 @@
+@import "src/colors.scss";
+
+.parent-card {
+  background-color: $aqua-green-transparent-2;
+  border: 1px solid transparent;
+  border-radius: 0.225rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  width: 20rem;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.titleText {
+  display: block;
+  color: $off-white;
+  transition: all 0.3 ease-in-out;
+}
+
+.parent-card:hover {
+  border: 1px solid $aqua-green;
+  background-color: $aqua-green-transparent-3;
+  .titleText {
+    display: none;
+  }
+  .explore-btn {
+    display: block;
+  }
+}
+
+.explore-btn {
+  display: none;
+  padding: 0.625rem 1.25rem;
+  background-color: $aqua-green-transparent-5;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  opacity: 1;
+  transition: all 0.3s ease, color 0.3s ease;
+}

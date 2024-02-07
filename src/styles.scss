@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+@import 'src/colors.scss';
+
 
 html,
 body {
@@ -6,10 +9,47 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $black-light;
 }
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+// Styles for text color
+.purple-color {
+  color: $purple-text;
+}
+
+.aqua-green-text {
+  color: $aqua-green;
+}
+
+// STyles for font size
+.font-1 {
+  font-size: 1rem;
+}
+
+// Styles for font weight
+.fg-400 {
+  font-weight: 400;
+}
+.fg-300 {
+  font-weight: 300;
+}
+.fg-500 {
+  font-weight: 500;
+}
+.fg-600 {
+  font-weight: 600;
+}
+.fg-700 {
+  font-weight: 700;
 }
