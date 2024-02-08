@@ -1,0 +1,42 @@
+@import 'src/colors.scss';
+
+.parent-card {
+  background-color: $purple-hg;
+  width: 100%;
+  height: 23rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.225rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.thumbnail {
+  width: 30%;
+  height: 100%;
+  margin-right: 1rem;
+  // background-color: gray;
+  padding: 1rem;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 60%;
+  background-color: $purple-text-2;
+}
+
+.card-content {
+  width: 70%;
+  height: 100%;
+  // margin: 1rem;
+  border-radius: 0.225rem;
+  background-color: $purple-text-2;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+  // background: red;
+}

@@ -7,12 +7,14 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   position: relative;
-  width: 35rem;
-  height: 12.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  // width: 35rem;
+  // height: 12.5rem;
+  width: 100%;
+  height: 12.5rem;
 }
 
 .titleText {
@@ -24,6 +26,12 @@
 .parent-card:hover {
   border: 1px solid $aqua-green;
   background-color: $aqua-green-transparent-3;
+
+  // increasing size when hover
+  // width: 36rem;
+  // height: 13.5rem;
+  // width: 71%;
+
 
   .titleText {
     display: none;

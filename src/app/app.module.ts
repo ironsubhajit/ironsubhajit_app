@@ -15,6 +15,15 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 import { CustomTextComponent } from './components/custom-text/custom-text.component';
 import { RactCardComponent } from './components/ract-card/ract-card.component';
 import { SquareCardComponent } from './components/square-card/square-card.component';
+import { CustomCaroselComponent } from './components/custom-carosel/custom-carosel.component';
+
+// primeng modules
+import { CarouselModule } from 'primeng/carousel';
+import { TagModule } from 'primeng/tag';
+import { ButtonModule } from 'primeng/button';
+import { ScheduleMeetingBtnComponent } from './components/schedule-meeting-btn/schedule-meeting-btn.component';
+
+const primengModule = [CarouselModule, TagModule, ButtonModule];
 
 @NgModule({
   declarations: [
@@ -29,14 +38,17 @@ import { SquareCardComponent } from './components/square-card/square-card.compon
     ProjectDetailComponent,
     CustomTextComponent,
     RactCardComponent,
-    SquareCardComponent
+    SquareCardComponent,
+    CustomCaroselComponent,
+    ScheduleMeetingBtnComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ...primengModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

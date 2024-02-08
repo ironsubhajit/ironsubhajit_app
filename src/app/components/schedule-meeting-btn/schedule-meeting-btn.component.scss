@@ -1,0 +1,23 @@
+@import 'src/colors.scss';
+
+.schedule-meeting-btn {
+    width: 100%;
+    height: 3rem;
+    background-color: $purple-hg;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 0.225rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.schedule-meeting-btn:hover{
+    opacity: 1;
+}
+
+.schedule-meeting-btn p {
+    margin: 0px;
+}

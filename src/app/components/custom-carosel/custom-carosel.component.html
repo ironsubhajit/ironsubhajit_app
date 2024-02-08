@@ -1,0 +1,52 @@
+<div class="services-carosel" style="width: 100%;">
+  <div class="card" style="background-color: transparent; border: none;">
+    <p-carousel
+      [value]="avalServices"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="4000"
+    >
+      <ng-template let-service pTemplate="item">
+        <div class="parent-card">
+          <div class="thumbnail">
+            <div class="circle-container">
+              <img
+                style="width: 100%; border-radius: 50%;"
+                [src]="service?.thumbnail_url"
+                [alt]="service?.service_name"
+              />
+            </div>
+          </div>
+          <div class="card-content">
+            
+          </div>
+        </div>
+        <!-- <div
+          class="border-1 surface-border border-round m-2 text-center py-5 px-3"
+        >
+          <div class="mb-2">
+            <img
+              style="width: 20rem"
+              src="../../../assets/images/laptop_working.jpg"
+              [alt]="service?.service_name"
+            />
+          </div>
+          <div>
+            <h4 class="mb-1 text-white">{{ service?.service_name }}</h4>
+            <h4 class="mb-1 text-white">{{ service?.desciption }}</h4>
+            <h4 class="mb-1 text-white">{{ service?.category }}</h4>
+            <h6 class="mt-0 mb-3 text-white">
+              {{ "$" + service?.hour_price }}
+            </h6>
+            <p-tag
+              class="mb-1 text-white"
+              [value]="service?.fixed_price"
+              [severity]="'success'"
+            ></p-tag>
+          </div>
+        </div> -->
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>
