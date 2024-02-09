@@ -22,6 +22,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
 import { ButtonModule } from 'primeng/button';
 import { ScheduleMeetingBtnComponent } from './components/schedule-meeting-btn/schedule-meeting-btn.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const primengModule = [CarouselModule, TagModule, ButtonModule];
 
@@ -41,6 +42,7 @@ const primengModule = [CarouselModule, TagModule, ButtonModule];
     SquareCardComponent,
     CustomCaroselComponent,
     ScheduleMeetingBtnComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

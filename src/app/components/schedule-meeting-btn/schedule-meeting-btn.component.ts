@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./schedule-meeting-btn.component.scss']
 })
 export class ScheduleMeetingBtnComponent {
-  
+  openScheduleMeetingDialog() {
+  console.log("pop up to schedule a meeting.")
+ } 
 }

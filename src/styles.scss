@@ -75,8 +75,9 @@ body {
 
 .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
   background: $purple-hg;
-  width: 1rem;
-  height: 1rem;
-  margin-right: 0.25rem;
-  margin-left: 0.25rem;
+  // width: 1rem;
+  // height: 1rem;
+  transform: scale(2);
+  margin-right: 0.35rem;
+  margin-left: 0.35rem;
 }
