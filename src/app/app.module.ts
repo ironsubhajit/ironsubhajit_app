@@ -23,8 +23,18 @@ import { TagModule } from 'primeng/tag';
 import { ButtonModule } from 'primeng/button';
 import { ScheduleMeetingBtnComponent } from './components/schedule-meeting-btn/schedule-meeting-btn.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CustomTextAreaComponent } from './components/custom-text-area/custom-text-area.component';
+import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 
-const primengModule = [CarouselModule, TagModule, ButtonModule];
+// Material modules
+import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
+const primengModules = [CarouselModule, TagModule, ButtonModule, InputTextModule];
+const matModules = [MatButtonModule, MatProgressSpinnerModule];
 
 @NgModule({
   declarations: [
@@ -43,12 +53,17 @@ const primengModule = [CarouselModule, TagModule, ButtonModule];
     CustomCaroselComponent,
     ScheduleMeetingBtnComponent,
     FooterComponent,
+    CustomInputComponent,
+    CustomTextAreaComponent,
+    CustomButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ...primengModule,
+    ReactiveFormsModule,
+    ...primengModules,
+    ...matModules,
   ],
   providers: [],
   bootstrap: [AppComponent],

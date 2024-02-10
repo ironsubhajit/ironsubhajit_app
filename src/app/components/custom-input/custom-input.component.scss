@@ -1,0 +1,23 @@
+@import 'src/colors.scss';
+
+input.form-input-box {
+  font-size: 0.75rem;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  background-color: $aqua-green-transparent-8;
+}
+
+input.form-input-box {
+  border: 1px solid transparent;
+  border-radius: 0.225rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+input.form-input-box:focus {
+  border: 1px solid $aqua-green;
+  border-radius: 0.225rem;
+  outline: none;
+}
+

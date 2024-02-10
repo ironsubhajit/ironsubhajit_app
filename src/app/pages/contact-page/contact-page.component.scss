@@ -1,0 +1,41 @@
+@import "src/colors.scss";
+
+.parent-container {
+  width: 100%;
+  // background-color: gray;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.side-img-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.contact-form {
+  border: 1px solid $aqua-green;
+  border-radius: 0.225rem;
+  width: 100%;
+  padding: 0.65rem;
+  // background-color: red;
+}
+
+.contact-form-container {
+  width: 40%;
+  // background-color: rgb(108, 94, 94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-box-heighlight {
+  border-color: $aqua-green;
+}
+
+.send-feedback-btn-container {
+  // background-color: red;
+}

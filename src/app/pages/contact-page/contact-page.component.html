@@ -1,1 +1,28 @@
-<p>contact-page works!</p>
+<div class="container parent-container">
+  <div class="side-img-container">
+    <img src="../../../assets/icons/contact_logo.png" alt="contact image" />
+  </div>
+  <div class="contact-form-container">
+    <div class="contact-form flex justify-content-center">
+      <ironsubhajit-custom-input
+        [placeholder]="'Enter your full name.'"
+        [control]="fullName"
+        [loading]="loading"
+      />
+      <ironsubhajit-custom-input
+        [placeholder]="'Enter your email id.'"
+        [control]="emailId"
+        [loading]="loading"
+      />
+      <ironsubhajit-custom-text-area
+        [customStyle]="{ height: '12rem', resize: 'none' }"
+        [placeholder]="'Enter your message.'"
+        [control]="message"
+        [loading]="loading"
+      ></ironsubhajit-custom-text-area>
+      <div class="send-feedback-btn-container">
+        <ironsubhajit-custom-button [buttonText]="buttonText" [onClick]="sendFeedback" [loading]="loading" />
+      </div>
+    </div>
+  </div>
+</div>

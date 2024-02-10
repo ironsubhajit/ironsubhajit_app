@@ -1,0 +1,40 @@
+@import 'src/colors.scss';
+
+textarea.form-input-box {
+  font-size: 0.75rem;
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  background-color: $aqua-green-transparent-8;
+}
+
+textarea.form-input-box {
+  border: 1px solid transparent;
+  border-radius: 0.225rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+textarea.form-input-box:focus {
+  border: 1px solid $aqua-green;
+  border-radius: 0.225rem;
+  outline: none;
+}
+
+
+// customized scrollbar
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.25rem $aqua-green-transparent-2; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $medium-gray; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: $medium-gray; 
+}

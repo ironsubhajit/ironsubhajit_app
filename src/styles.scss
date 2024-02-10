@@ -81,3 +81,33 @@ body {
   margin-right: 0.35rem;
   margin-left: 0.35rem;
 }
+
+.form-input-box {
+  font-size: 1rem;
+}
+
+// Custom scroll bar style
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0.25rem $aqua-green-transparent-2; 
+  border-radius: 0.225rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $dark-gray; 
+  border-radius: 0.225rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $medium-gray; 
+}
+
+

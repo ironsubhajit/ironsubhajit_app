@@ -1,0 +1,11 @@
+<!-- custom-input-box.component.html -->
+<input
+  type="text"
+  [placeholder]="placeholder"
+  [formControl]="control"
+  [disabled]="loading"
+  (focus)="onFocus()"
+  (blur)="onBlur()"
+  [ngClass]="{ 'form-input-box': true }"
+  [ngStyle]="customStyle"
+/>
