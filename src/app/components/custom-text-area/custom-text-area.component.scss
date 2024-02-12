@@ -11,7 +11,6 @@ textarea.form-input-box {
   border: 1px solid transparent;
   border-radius: 0.225rem;
   outline: none;
-  margin-bottom: 0.5rem;
   transition: all 0.2s ease-in-out;
 }
 
@@ -19,6 +18,15 @@ textarea.form-input-box:focus {
   border: 1px solid $aqua-green;
   border-radius: 0.225rem;
   outline: none;
+}
+
+.textarea-container {
+  margin-bottom: 0.5rem;
+}
+
+mat-error.error-msg {
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
 }
 
 

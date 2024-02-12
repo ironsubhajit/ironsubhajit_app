@@ -28,13 +28,15 @@ import { CustomInputComponent } from './components/custom-input/custom-input.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { CustomTextAreaComponent } from './components/custom-text-area/custom-text-area.component';
 import { CustomButtonComponent } from './components/custom-button/custom-button.component';
+import { SkeletonModule } from 'primeng/skeleton';
 
 // Material modules
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatInputModule} from '@angular/material/input';
 
-const primengModules = [CarouselModule, TagModule, ButtonModule, InputTextModule];
-const matModules = [MatButtonModule, MatProgressSpinnerModule];
+const primengModules = [CarouselModule, TagModule, ButtonModule, InputTextModule, SkeletonModule];
+const matModules = [MatButtonModule, MatProgressSpinnerModule, MatInputModule];
 
 @NgModule({
   declarations: [

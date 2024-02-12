@@ -1,4 +1,18 @@
+@import 'src/colors.scss';
+
 ironsubhajit-project-card {
     display: flex;
     justify-content: center;
+}
+
+
+// skeleton css
+.loading-skeleton {
+    background-color: $black;
+    padding: 1rem;
+    border-radius: 0.225rem;
+}
+
+.img-skeleton {
+    margin-bottom: 1rem;
 }

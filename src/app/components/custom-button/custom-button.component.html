@@ -1,4 +1,4 @@
-<button class="custom-button" [disabled]="loading" mat-raised-button (click)="handleClick()">
+<button class="custom-button" [disabled]="loading || !isValid" mat-raised-button (click)="handleClick()">
     <span *ngIf="!loading">{{ buttonText }}</span>
     <mat-spinner [diameter]="20" [color]="'accent'" *ngIf="loading"></mat-spinner>
 </button>

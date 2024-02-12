@@ -1,5 +1,9 @@
+@import 'src/colors.scss';
+
 .card {
     width: 18rem;
+    background-color: $black;
+    color: $off-white;
 }
 
 .card img.card-img-top {

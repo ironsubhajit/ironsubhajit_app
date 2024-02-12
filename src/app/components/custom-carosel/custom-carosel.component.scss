@@ -3,7 +3,8 @@
 .parent-card {
   background-color: $purple-hg;
   width: 100%;
-  height: 23rem;
+  min-height: 24rem;
+  height: auto;
   display: flex;
   flex-direction: row;
   border-radius: 0.225rem;
@@ -13,7 +14,7 @@
 
 .thumbnail {
   width: 30%;
-  height: 100%;
+  // height: 100%;
   margin-right: 1rem;
   // background-color: gray;
   padding: 1rem;
@@ -25,18 +26,31 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  border-radius: 60%;
+  border-radius: 50%;
   background-color: $purple-text-2;
 }
 
 .card-content {
   width: 70%;
-  height: 100%;
+  // height: 100%;
+  height: auto;
   // margin: 1rem;
   border-radius: 0.225rem;
   background-color: $purple-text-2;
 }
 
-.p-carousel .p-carousel-indicators .p-carousel-indicator button {
-  // background: red;
+@media (max-width: 768px) {
+  .parent-card {
+    flex-direction: column; /* Change to column layout on smaller screens */
+  }
+
+  .thumbnail {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem; /* Add spacing between thumbnail and card content */
+  }
+
+  .card-content {
+    width: 100%;
+  }
 }

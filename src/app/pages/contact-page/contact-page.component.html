@@ -4,24 +4,43 @@
   </div>
   <div class="contact-form-container">
     <div class="contact-form flex justify-content-center">
+      <!-- Name input -->
       <ironsubhajit-custom-input
+        [inputType]="'text'"
         [placeholder]="'Enter your full name.'"
-        [control]="fullName"
+        [formControlFieldName]="fullName"
         [loading]="loading"
+        [minLength]="fullNameMinLength"
+        [maxLength]="fullNameMaxLength"
       />
+
+      <!-- email input -->
       <ironsubhajit-custom-input
+        [inputType]="'email'"
         [placeholder]="'Enter your email id.'"
-        [control]="emailId"
+        [formControlFieldName]="emailId"
         [loading]="loading"
       />
+
+      <!-- messgage textarea -->
       <ironsubhajit-custom-text-area
+        [inputType]="'text'"
         [customStyle]="{ height: '12rem', resize: 'none' }"
         [placeholder]="'Enter your message.'"
-        [control]="message"
+        [formControlFieldName]="message"
+        [minLength]="messageMinLength"
+        [maxLength]="messageMaxLength"
         [loading]="loading"
       ></ironsubhajit-custom-text-area>
+      
+      <!-- Send button -->
       <div class="send-feedback-btn-container">
-        <ironsubhajit-custom-button [buttonText]="buttonText" [onClick]="sendFeedback" [loading]="loading" />
+        <ironsubhajit-custom-button
+          [buttonText]="buttonText"
+          [onClick]="sendFeedback"
+          [loading]="loading"
+          [isValid]="isFormValid()"
+        />
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'ironsubhajit-contact-page',
@@ -8,9 +8,26 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ContactPageComponent {
   // formGroup: FormGroup | undefined;
-  fullName: FormControl = new FormControl('');
-  emailId: FormControl = new FormControl('');
-  message: FormControl = new FormControl('');
+  fullNameMinLength: number = 3;
+  fullNameMaxLength: number = 50;
+
+  messageMinLength: number = 3;
+  messageMaxLength: number = 500;
+
+  fullName: FormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(this.fullNameMinLength),
+    Validators.maxLength(this.fullNameMaxLength),
+  ]);
+  emailId: FormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
+  message: FormControl = new FormControl('', [
+    Validators.required,
+    Validators.minLength(this.messageMinLength),
+    Validators.maxLength(this.messageMaxLength),
+  ]);
 
   loading: boolean = false;
 
@@ -19,10 +36,31 @@ export class ContactPageComponent {
 
   ngOnInit() {}
 
+  // checks form validity
+  isFormValid(): boolean {
+    return this.fullName?.valid && this.emailId.valid && this.message?.valid;
+  }
+
+  // disable all form fields
+  disableFormFields(): void {
+    this.fullName?.disable();
+    this.emailId?.disable();
+    this.message?.disable();
+  }
+
+  // enable all form fields
+  enableFormFields(): void {
+    this.fullName?.enable();
+    this.emailId?.enable();
+    this.message?.enable();
+  }
+
   sendFeedback() {
     this.loading = true;
+    // this.disableFormFields();
     setTimeout(() => {
       this.loading = false;
+      // this.enableFormFields();
     }, 10000);
   }
 }

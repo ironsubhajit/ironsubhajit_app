@@ -1,6 +1,6 @@
 <!-- custom-textarea-box.component.html -->
 
-<textarea
+<!-- <textarea
   type="text"
   [placeholder]="placeholder"
   [formControl]="control"
@@ -9,4 +9,46 @@
   (blur)="onBlur()"
   [ngClass]="{ 'form-input-box': true }"
   [ngStyle]="customStyle"
-></textarea>
+></textarea> -->
+
+<div class="textarea-container">
+  <textarea
+    [type]="inputType"
+    matInput
+    [formControl]="formControlFieldName"
+    [errorStateMatcher]="matcher"
+    [placeholder]="placeholder"
+    [ngClass]="{ 'form-input-box': true }"
+    [ngStyle]="customStyle"
+  ></textarea>
+  <!-- field required error -->
+  <mat-error
+    class="error-msg"
+    *ngIf="
+      formControlFieldName.hasError('required') &&
+      (formControlFieldName.dirty || formControlFieldName.touched)
+    "
+    >This is mandatory field.</mat-error
+  >
+  <!-- min length error -->
+  <mat-error
+    class="error-msg"
+    *ngIf="
+      formControlFieldName.hasError('minlength') &&
+      !formControlFieldName.hasError('required') &&
+      (formControlFieldName.dirty || formControlFieldName.touched)
+    "
+    >Minimum length is {{ minLength }} characters.</mat-error
+  >
+
+  <!-- max length error -->
+  <mat-error
+    class="error-msg"
+    *ngIf="
+      formControlFieldName.hasError('maxlength') &&
+      !formControlFieldName.hasError('required') &&
+      (formControlFieldName.dirty || formControlFieldName.touched)
+    "
+    >Minimum length is {{ maxLength }} characters.</mat-error
+  >
+</div>
