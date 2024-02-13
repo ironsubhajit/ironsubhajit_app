@@ -1,5 +1,10 @@
 @import 'src/colors.scss';
 
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
 .parent-card {
   background-color: $purple-hg;
   width: 100%;
