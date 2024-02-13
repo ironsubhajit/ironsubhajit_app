@@ -55,6 +55,7 @@
   background-color: $purple-text-2;
 }
 
+// Tablet devices screen sizes
 @media (max-width: 768px) {
   .parent-card {
     flex-direction: column; /* Change to column layout on smaller screens */
