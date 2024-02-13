@@ -9,17 +9,16 @@
     >
       <ng-template let-service pTemplate="item">
         <div class="parent-card">
-          <div class="thumbnail">
-            <div class="circle-container">
-              <img
-                style="width: 100%; border-radius: 50%;"
-                [src]="service?.thumbnail_url"
-                [alt]="service?.service_name"
-              />
+            <div class="thumbnail">
+              <div class="circle-container">
+                <img
+                  [src]="service?.thumbnail_url"
+                  [alt]="service?.service_name"
+                />
+              </div>
             </div>
-          </div>
           <div class="card-content">
-            
+            <p>demo content</p>
           </div>
         </div>
         <!-- <div
