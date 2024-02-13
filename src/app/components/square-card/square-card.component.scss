@@ -4,7 +4,6 @@
   background-color: $aqua-green-transparent-2;
   border: 1px solid transparent;
   border-radius: 0.225rem;
-  transition: all 0.3s ease-in-out;
   cursor: pointer;
   position: relative;
   width: 100%;
@@ -12,18 +11,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .titleText {
   display: block;
   color: $off-white;
+  text-align: center;
   transition: all 0.3 ease-in-out;
 }
 
 .parent-card:hover {
   border: 1px solid $aqua-green;
   background-color: $aqua-green-transparent-3;
+  box-shadow: 0 0 4px 4px $aqua-green-transparent-2;
 
   // increasing size when hover
   // width: 21rem;
@@ -48,4 +49,13 @@
   border-radius: 5px;
   opacity: 1;
   transition: all 0.3s ease, color 0.3s ease;
+}
+
+// Mobile devices screen sizes
+@media (max-width: 768px) {
+  .explore-btn {
+    padding: 0.3rem 0rem;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }

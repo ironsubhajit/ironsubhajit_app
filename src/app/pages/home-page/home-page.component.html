@@ -12,25 +12,29 @@
   </div>
 
   <!-- multiple domain areas container -->
-  <div class="domain-container" style="width: 100%;">
+  <div class="domain-container" style="width: 100%">
     <p class="title-text-style font-1">
       Powerful <span class="aqua-green-text">features</span> to <br />
       fuel our success
     </p>
-    <div style="display: flex; flex-direction: row; width: 100%;">
+    <div class="projects-card-container">
       <!-- coloum 1 -->
-      <div style="display: flex; flex-direction: column; width: 72%; margin-right: 20px;">
+      <div
+        class="card-margin-right-2 card-margin-bottom-2"
+        style="display: flex; flex-direction: column; width: 72%"
+      >
         <!-- row 1 -->
         <div class="domain-container-row">
           <ironsubhajit-ract-card
             cardTitle="website developement projects"
             btnText="explore web projects"
-            style="margin-right: 20px; width: 60%;"
+            style="width: 60%"
+            class="card-margin-right-2 card-margin-bottom-2"
           ></ironsubhajit-ract-card>
           <ironsubhajit-square-card
             cardTitle="java projects"
             btnText="explore java projects"
-            style="width: 40%;"
+            style="width: 40%"
           ></ironsubhajit-square-card>
         </div>
         <!-- row 2 -->
@@ -38,12 +42,13 @@
           <ironsubhajit-square-card
             cardTitle="python projects"
             btnText="explore python projects"
-            style="margin-right: 20px; width: 40%;"
+            style="width: 40%"
+            class="card-margin-right-2 card-margin-bottom-2"
           ></ironsubhajit-square-card>
           <ironsubhajit-ract-card
             cardTitle="Artificial Intellegence projects"
             btnText="explore AI projects"
-            style="width: 60%;"
+            style="width: 60%"
           ></ironsubhajit-ract-card>
         </div>
         <!-- row 3 -->
@@ -51,21 +56,23 @@
           <ironsubhajit-ract-card
             cardTitle="machine learning projects"
             btnText="explore ml projects"
-            style="margin-right: 20px; width: 60%;"
+            style="width: 60%"
+            class="card-margin-right-2 card-margin-bottom-2"
           ></ironsubhajit-ract-card>
           <ironsubhajit-square-card
             cardTitle="analytics projects"
             btnText="explore analytic projects"
-            style="width: 40%;"
+            style="width: 40%"
           ></ironsubhajit-square-card>
         </div>
       </div>
       <!-- coloum 2 -->
-      <div style="display: flex; flex-direction: column; width: 28%;">
+      <div style="display: flex; flex-direction: column; width: 28%">
         <ironsubhajit-square-card
           cardTitle="Mobile app projects"
           btnText="explore mob projects"
-          [parentDivStyle]="{ height: '26.25rem' }"
+          [parentDivStyle]="customHeight"
+          class="card-margin-bottom-2"
         ></ironsubhajit-square-card>
         <ironsubhajit-square-card
           cardTitle="consultant projects"
@@ -84,7 +91,6 @@
   <div>
     <ironsubhajit-schedule-meeting-btn></ironsubhajit-schedule-meeting-btn>
   </div>
-
 
   <!-- Looping over the project list -->
   <!-- <div
