@@ -7,6 +7,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact-page.component.scss'],
 })
 export class ContactPageComponent {
+
+  imagePath: string = '/assets/icons/contact_logo.png';
+
   // formGroup: FormGroup | undefined;
   fullNameMinLength: number = 3;
   fullNameMaxLength: number = 50;

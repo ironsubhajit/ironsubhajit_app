@@ -1,6 +1,7 @@
 <div class="container parent-container">
   <div class="side-img-container">
-    <img src="../../../assets/icons/contact_logo.png" alt="contact image" />
+    <div class="page-title"></div>
+    <img class="img-style" [src]="imagePath" alt="contact image" />
   </div>
   <div class="contact-form-container">
     <div class="contact-form flex justify-content-center">
@@ -32,7 +33,7 @@
         [maxLength]="messageMaxLength"
         [loading]="loading"
       ></ironsubhajit-custom-text-area>
-      
+
       <!-- Send button -->
       <div class="send-feedback-btn-container">
         <ironsubhajit-custom-button
