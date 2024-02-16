@@ -8,33 +8,70 @@ import { ServiceType } from 'src/app/interfaces/services_type';
 })
 export class CustomCaroselComponent {
   @Input()
-  avalServices: ServiceType[]= [
+  avalServices: ServiceType[] = [
     {
-      _id: '1000',
-      service_name: 'Demo Name',
-      desciption: 'Demo desc',
+      _id: '0001',
+      service_name: 'Website service',
+      desciption: {
+        "title": 'Website services we offer',
+        "descPoints": [
+          'All-in-one website solutions: From design to deployment, we handle it all seamlessly.',
+          'Expertise you can trust: Our team is dedicated to bringing your vision to life with precision and excellence.',
+          'Simplified process: Enjoy a hassle-free experience from start to finish, with transparent communication every step of the way.',
+          'Hourly price: $20/hr',
+          'Fixed price: Fixed-price packages tailored to your project needs.',
+          'Flexible pricing options: Choose between hourly rates or fixed-price packages tailored to your project needs.',
+        ],
+      },
       thumbnail_url: '/assets/icons/web_dev_service_logo.png',
-      category: 'Web dev',
-      hour_price: '$20/hr',
-      fixed_price: 'Based on project.',
     },
     {
-      _id: '1001',
-      service_name: 'Demo Name 2',
-      desciption: 'Demo desc',
-      thumbnail_url: '/assets/icons/services_logo_purple.png',
-      category: 'Web dev',
-      hour_price: '$20/hr',
-      fixed_price: 'Based on project.',
+      _id: '0002',
+      service_name: 'Mobile App service',
+      desciption: {
+        "title": 'Mobile Application services we offer',
+        "descPoints": [
+          'All-in-one website solutions: From design to deployment, we handle it all seamlessly.',
+          'Expertise you can trust: Our team is dedicated to bringing your vision to life with precision and excellence.',
+          'Simplified process: Enjoy a hassle-free experience from start to finish, with transparent communication every step of the way.',
+          'Hourly price: $20/hr',
+          'Fixed price: Fixed-price packages tailored to your project needs.',
+          'Flexible pricing options: Choose between hourly rates or fixed-price packages tailored to your project needs.',
+        ],
+      },
+      thumbnail_url: '/assets/icons/MobAppDevelopment1.png',
     },
     {
-      _id: '1002',
-      service_name: 'Demo Name 3',
-      desciption: 'Demo desc',
-      thumbnail_url: '/assets/icons/web_dev_service_logo.png',
-      category: 'Web dev',
-      hour_price: '$20/hr',
-      fixed_price: 'Based on project.',
+      _id: '0003',
+      service_name: 'AI Services',
+      desciption: {
+        "title": 'AI services we offer',
+        "descPoints": [
+          'All-in-one website solutions: From design to deployment, we handle it all seamlessly.',
+          'Expertise you can trust: Our team is dedicated to bringing your vision to life with precision and excellence.',
+          'Simplified process: Enjoy a hassle-free experience from start to finish, with transparent communication every step of the way.',
+          'Hourly price: $20/hr',
+          'Fixed price: Fixed-price packages tailored to your project needs.',
+          'Flexible pricing options: Choose between hourly rates or fixed-price packages tailored to your project needs.',
+        ],
+      },
+      thumbnail_url: '/assets/icons/CreativeTeam1.png',
+    },
+    {
+      _id: '0004',
+      service_name: 'Consultant Services',
+      desciption: {
+        "title": 'Tech Consultancy services we offer',
+        "descPoints": [
+          'All-in-one website solutions: From design to deployment, we handle it all seamlessly.',
+          'Expertise you can trust: Our team is dedicated to bringing your vision to life with precision and excellence.',
+          'Simplified process: Enjoy a hassle-free experience from start to finish, with transparent communication every step of the way.',
+          'Hourly price: $20/hr',
+          'Fixed price: Fixed-price packages tailored to your project needs.',
+          'Flexible pricing options: Choose between hourly rates or fixed-price packages tailored to your project needs.',
+        ],
+      },
+      thumbnail_url: '/assets/icons/services_logo_purple1.png',
     },
   ];
 
