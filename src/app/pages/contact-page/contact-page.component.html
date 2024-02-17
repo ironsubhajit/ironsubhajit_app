@@ -1,9 +1,12 @@
 <div class="container parent-container">
   <div class="side-img-container">
-    <img src="../../../assets/icons/contact_logo.png" alt="contact image" />
+    <img class="img-style" [src]="imagePath" alt="contact image" />
   </div>
   <div class="contact-form-container">
     <div class="contact-form flex justify-content-center">
+      <div class="title-container">
+        <p class="title">Let us know your <span class="aqua-green-text">thoughts</span></p>
+      </div>
       <!-- Name input -->
       <ironsubhajit-custom-input
         [inputType]="'text'"
@@ -32,7 +35,7 @@
         [maxLength]="messageMaxLength"
         [loading]="loading"
       ></ironsubhajit-custom-text-area>
-      
+
       <!-- Send button -->
       <div class="send-feedback-btn-container">
         <ironsubhajit-custom-button

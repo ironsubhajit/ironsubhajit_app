@@ -1,5 +1,5 @@
-<div class="services-carosel" style="width: 100%;">
-  <div class="card" style="background-color: transparent; border: none;">
+<div class="services-carosel" style="width: 100%">
+  <div class="card" style="background-color: transparent; border: none">
     <p-carousel
       [value]="avalServices"
       [numVisible]="1"
@@ -9,16 +9,25 @@
     >
       <ng-template let-service pTemplate="item">
         <div class="parent-card">
-            <div class="thumbnail">
-              <div class="circle-container">
-                <img
-                  [src]="service?.thumbnail_url"
-                  [alt]="service?.service_name"
-                />
-              </div>
+          <div class="thumbnail">
+            <div class="circle-container">
+              <img
+                [src]="service?.thumbnail_url"
+                [alt]="service?.service_name"
+              />
             </div>
+          </div>
           <div class="card-content">
-            <p>demo content</p>
+            <h2 class="service-card-header">
+              {{ service?.desciption?.title | titlecase }}
+            </h2>
+            <div>
+              <ul class="services-desc">
+                <li class="list-item" *ngFor="let descPoint of service?.desciption?.descPoints">
+                  {{ descPoint }}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <!-- <div

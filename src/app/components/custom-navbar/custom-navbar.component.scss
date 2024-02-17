@@ -1,11 +1,20 @@
-@import 'src/colors.scss';
+@import "src/colors.scss";
 
 #bat-brand img {
-    width: 2rem;
+  width: 2rem;
 }
 
 // Modified bootstarp css class
 .navbar {
-    --bs-navbar-padding-y: 0.35rem;
-    background-color: $black !important;
+  --bs-navbar-padding-y: 0.35rem;
+  background-color: $black !important;
+}
+
+// Tablet devices screen sizes
+@media (max-width: 820px) {
+  // Modified bootstarp css class
+  .navbar {
+    --bs-navbar-padding-y: 0.3rem;
+    font-size: 0.875rem;
+  }
 }
