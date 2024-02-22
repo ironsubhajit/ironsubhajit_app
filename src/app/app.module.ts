@@ -36,9 +36,10 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatInputModule} from '@angular/material/input';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 const primengModules = [CarouselModule, TagModule, ButtonModule, InputTextModule, SkeletonModule, DialogModule, ConfirmDialogModule];
-const matModules = [MatButtonModule, MatProgressSpinnerModule, MatInputModule];
+const matModules = [MatButtonModule, MatProgressSpinnerModule, MatInputModule, MatDatepickerModule];
 
 @NgModule({
   declarations: [

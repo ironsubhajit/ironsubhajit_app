@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm } from '@angular/forms';
+import * as moment from 'moment';
 import { ErrorStateMatcher } from '@angular/material/core';
 
 
@@ -31,8 +32,6 @@ export class CustomInputComponent implements OnInit {
   @Input()
   customStyle: { [key: string]: string } = {};
 
-  isFocused: boolean = false;
-
   @Input()
   inputType: string = 'text';
 
@@ -41,17 +40,33 @@ export class CustomInputComponent implements OnInit {
   @Input()
   maxLength: number = 10;
 
+  @Input()
+  minDate: Date = new Date();
+
+  @Input()
+  minTime: string = this.getCurrentTime();
+  
   matcher = new CustomInputErrorStateMatcher();
+
+  getCurrentTime(): string {
+    const now = new Date();
+    const hours = this.padZero(now.getHours());
+    const minutes = this.padZero(now.getMinutes());
+    const seconds = this.padZero(now.getSeconds());
+    return `${hours}:${minutes}:${seconds}`;
+  }
+  
+  private padZero(num: number): string {
+    return num < 10 ? '0' + num : num.toString();
+  }
+
+  // Method to format the date
+  formatedDate(date: Date) {
+    return moment(date).format('YYYY-MM-DD');
+  }
 
   ngOnInit(): void {
     console.log("Loading value => ", this.loading)
-  }
-
-  onFocus() {
-    this.isFocused = true;
-  }
-
-  onBlur() {
-    this.isFocused = false;
+    // console.log("formcontrol value => ", this.formControlFieldName.value)
   }
 }
