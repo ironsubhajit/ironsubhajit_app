@@ -13,7 +13,7 @@ export class HomePageComponent {
   screenWidth!: number;
   customHeight!: { [key: string]: string };
 
-  imagePath: string = '/assets/vector_images/welcome_banner.png'
+  imagePath: string = '/assets/icons/welcome_banner.png'
 
   constructor(private projectService: ProjectService, private cdr: ChangeDetectorRef) {
      // Initialize the screenWidth property with the initial window height
