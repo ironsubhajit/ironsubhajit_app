@@ -1,7 +1,8 @@
-<div class="schedule-meeting-btn" (click)="openScheduleMeetingDialog()">
+<div *ngIf="showScheduleMeetingBtn" class="schedule-meeting-btn" (click)="openScheduleMeetingDialog()">
   <p>Schedule a meeting</p>
 </div>
 
+<!-- Schedule meeting modal -->
 <div class="flex justify-content-center">
   <p-dialog
     header="Schedule your meeting"

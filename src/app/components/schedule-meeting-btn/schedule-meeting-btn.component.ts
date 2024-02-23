@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,11 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./schedule-meeting-btn.component.scss'],
 })
 export class ScheduleMeetingBtnComponent implements OnInit {
+
+  @Input()
+  showScheduleMeetingBtn: boolean = true;
+  
+  @Input()
   displayDialog: boolean = false;
   loading: boolean = false;
 
