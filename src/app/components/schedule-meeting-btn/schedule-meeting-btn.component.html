@@ -1,18 +1,63 @@
-<div class="schedule-meeting-btn" (click)="openScheduleMeetingDialog()">
+<div *ngIf="showScheduleMeetingBtn" class="schedule-meeting-btn" (click)="openScheduleMeetingDialog()">
   <p>Schedule a meeting</p>
 </div>
 
-<!-- <div class="flex justify-content-center">
+<!-- Schedule meeting modal -->
+<div class="flex justify-content-center">
   <p-dialog
-    header="Header"
-    [(visible)]="visible"
+    header="Schedule your meeting"
+    [(visible)]="displayDialog"
     [modal]="true"
-    [style]="{ width: '50vw' }"
     [draggable]="false"
     [resizable]="false"
+    [position]="'center'"
+    (onHide)="closeScheduleMeetingDialog()"
   >
-    <p-dialog-titlebar>
-
-    </p-dialog-titlebar>
+    <div class="dialog-content">
+      <div class="">
+        <ironsubhajit-custom-input
+          [formControlFieldName]="fullName"
+          [inputType]="'text'"
+          [placeholder]="'Enter your name.'"
+        ></ironsubhajit-custom-input>
+        <ironsubhajit-custom-input
+          [formControlFieldName]="emailId"
+          [inputType]="'email'"
+          [placeholder]="'Enter your email id.'"
+        ></ironsubhajit-custom-input>
+        <div class="meeting-timing">
+          <ironsubhajit-custom-input
+            [customStyle]="{ 'margin-right': '0.25rem' }"
+            [formControlFieldName]="meetingDate"
+            [inputType]="'date'"
+            [placeholder]="'Please select a date'"
+          ></ironsubhajit-custom-input>
+          <ironsubhajit-custom-input
+            [customStyle]="{ 'margin-left': '0.25rem' }"
+            [formControlFieldName]="meetingTime"
+            [inputType]="'time'"
+            [placeholder]="'Please select a time'"
+          ></ironsubhajit-custom-input>
+        </div>
+        <!-- <ironsubhajit-custom-input [placeholder]="'Enter your name.'"></ironsubhajit-custom-input> -->
+      </div>
+      <div class=""></div>
+      <div class="mb-2">
+        <button
+          pButton
+          type="button"
+          (click)="scheduleMeeting()"
+          class="custom-button"
+          [disabled]="isScheduleBtnDisabled()"
+        >
+          <span *ngIf="!loading">Schedule</span>
+          <mat-spinner
+            [diameter]="20"
+            [color]="'accent'"
+            *ngIf="loading"
+           ></mat-spinner>
+        </button>
+      </div>
+    </div>
   </p-dialog>
-</div> -->
+</div>

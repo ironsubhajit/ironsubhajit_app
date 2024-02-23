@@ -1,23 +1,89 @@
-@import 'src/colors.scss';
+@import "src/colors.scss";
 
 .schedule-meeting-btn {
-    width: 100%;
-    height: 3rem;
-    background-color: $purple-hg;
-    opacity: 0.4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 0.225rem;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 3rem;
+  background-color: $purple-hg;
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 0.225rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.schedule-meeting-btn:hover{
-    opacity: 1;
+.schedule-meeting-btn:hover {
+  opacity: 1;
 }
 
 .schedule-meeting-btn p {
-    margin: 0px;
+  margin: 0px;
+}
+
+.dialog-content {
+  background-color: $black-light;
+  border-radius: 0.5rem;
+  margin: 0.5rem 1rem 1rem 0.7rem;
+}
+
+.meeting-timing {
+  display: flex;
+  flex-direction: "row";
+  width: 100%;
+}
+
+:host ::ng-deep {
+  .p-dialog {
+    width: 40vw;
+  }
+
+  .p-dialog-header {
+    background-color: $black;
+  }
+
+  .p-dialog-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+
+  .p-dialog-titlebar-close {
+    color: $white;
+  }
+
+  .p-dialog-content {
+    background-color: $black-light;
+  }
+
+  .meeting-timing > ironsubhajit-custom-input {
+    width: 50%;
+  }
+
+  .p-dialog-header-close {
+    color: $off-white;
+  }
+  
+  .p-dialog-header-close:hover {
+    background-color: transparent;
+  }
+
+  .p-button-label {
+    color: $white;
+  }
+}
+
+.custom-button {
+  background-color: $aqua-green-transparent-5 !important;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

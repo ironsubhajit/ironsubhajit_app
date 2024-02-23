@@ -16,7 +16,7 @@ export class CustomButtonComponent implements OnInit {
   onClick!: () => void;
 
   @Input()
-  isValid: boolean = false;
+  isValid: boolean = true;
 
   ngOnInit(): void {}
 

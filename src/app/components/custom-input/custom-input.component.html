@@ -1,62 +1,91 @@
 <!-- custom-input-box.component.html -->
-<!-- <input
-  [type]="inputType"
-  [placeholder]="placeholder"
-  [formControl]="control"
-  [disabled]="loading"
-  (focus)="onFocus()"
-  (blur)="onBlur()"
-  [ngClass]="{ 'form-input-box': true }"
-  [ngStyle]="customStyle"
-/> -->
+<div [ngStyle]="customStyle" class="input-container">
+  <ng-container
+    *ngIf="
+      inputType === 'date';
+      then dateFieldInput;
+      else inputType === 'time' ? timeFieldInput : inputField
+    "
+  >
+  </ng-container>
 
-<div class="input-container">
-  <input
-    [type]="inputType"
-    matInput
-    [formControl]="formControlFieldName"
-    [errorStateMatcher]="matcher"
-    [placeholder]="placeholder"
-    [ngClass]="{ 'form-input-box': true }"
-  />
-  <!-- email error -->
-  <mat-error
-    *ngIf="
-      formControlFieldName.hasError('email') &&
-      !formControlFieldName.hasError('required') &&
-      (formControlFieldName.dirty || formControlFieldName.touched)
-    "
-    class="error-msg"
-    >Please enter a valid email address</mat-error
-  >
-  <!-- field required error -->
-  <mat-error
-    class="error-msg"
-    *ngIf="
-      formControlFieldName.hasError('required') &&
-      (formControlFieldName.dirty || formControlFieldName.touched)
-    "
-    >This is mandatory field.</mat-error
-  >
-  <!-- min length error -->
-  <mat-error
-    class="error-msg"
-    *ngIf="
-      formControlFieldName.hasError('minlength') &&
-      !formControlFieldName.hasError('required') &&
-      (formControlFieldName.dirty || formControlFieldName.touched)
-    "
-    >Minimum length is {{ minLength }} characters.</mat-error
-  >
+  <ng-template #dateFieldInput>
+    <!-- Date field input -->
+    <input
+      [type]="inputType"
+      matInput
+      [formControl]="formControlFieldName"
+      [min]="formatedDate(this.minDate)"
+      [errorStateMatcher]="matcher"
+      [placeholder]="placeholder"
+      [ngClass]="{ 'form-input-box': true }"
+    />
+  </ng-template>
 
-  <!-- max length error -->
-  <mat-error
-    class="error-msg"
-    *ngIf="
-      formControlFieldName.hasError('maxlength') &&
-      !formControlFieldName.hasError('required') &&
-      (formControlFieldName.dirty || formControlFieldName.touched)
-    "
-    >Minimum length is {{ maxLength }} characters.</mat-error
-  >
+  <ng-template #timeFieldInput>
+    <!-- Time input -->
+    <input
+      [type]="inputType"
+      matInput
+      [formControl]="formControlFieldName"
+      [errorStateMatcher]="matcher"
+      [placeholder]="placeholder"
+      [ngClass]="{ 'form-input-box': true }"
+    />
+  </ng-template>
+
+  <!-- input field -->
+  <ng-template #inputField>
+    <input
+      [type]="inputType"
+      matInput
+      [formControl]="formControlFieldName"
+      [errorStateMatcher]="matcher"
+      [placeholder]="placeholder"
+      [ngClass]="{ 'form-input-box': true }"
+    />
+  </ng-template>
+
+  <div class="error-container">
+    <!-- email error -->
+    <mat-error
+      *ngIf="
+        formControlFieldName.hasError('email') &&
+        !formControlFieldName.hasError('required') &&
+        (formControlFieldName.dirty || formControlFieldName.touched)
+      "
+      class="error-msg"
+      >Please enter a valid email address</mat-error
+    >
+    <!-- field required error -->
+    <mat-error
+      class="error-msg"
+      *ngIf="
+        formControlFieldName.hasError('required') &&
+        (formControlFieldName.dirty || formControlFieldName.touched)
+      "
+      >This is mandatory field.</mat-error
+    >
+    <!-- min length error -->
+    <mat-error
+      class="error-msg"
+      *ngIf="
+        formControlFieldName.hasError('minlength') &&
+        !formControlFieldName.hasError('required') &&
+        (formControlFieldName.dirty || formControlFieldName.touched)
+      "
+      >Minimum length is {{ minLength }} characters.</mat-error
+    >
+
+    <!-- max length error -->
+    <mat-error
+      class="error-msg"
+      *ngIf="
+        formControlFieldName.hasError('maxlength') &&
+        !formControlFieldName.hasError('required') &&
+        (formControlFieldName.dirty || formControlFieldName.touched)
+      "
+      >Minimum length is {{ maxLength }} characters.</mat-error
+    >
+  </div>
 </div>
