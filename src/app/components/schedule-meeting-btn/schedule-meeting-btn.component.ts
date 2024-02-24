@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -10,6 +10,8 @@ export class ScheduleMeetingBtnComponent implements OnInit {
 
   @Input()
   showScheduleMeetingBtn: boolean = true;
+
+  @Output() displayDialogStatus = new EventEmitter<boolean>();
   
   @Input()
   displayDialog: boolean = false;
@@ -91,5 +93,7 @@ export class ScheduleMeetingBtnComponent implements OnInit {
     console.log('pop up close to schedule a meeting.');
     this.resetFormFields();
     this.displayDialog = false;
+    // Emiting displayDialogOpen Status to parent
+    this.displayDialogStatus.emit(false);
   }
 }

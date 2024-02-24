@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  openMeetingModal() {
-    this.openMeetingModalStatus = true;
+  handleMeetingModalStatus(status: boolean) {
+    this.openMeetingModalStatus = status;
   }
 }
