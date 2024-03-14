@@ -6,7 +6,8 @@
 }
 
 .parent-card {
-  background-color: $purple-hg;
+  // background-color: $purple-hg;
+  background-color: $purple-dark;
   width: 100%;
   // min-height: 24rem;
   height: auto;
@@ -61,7 +62,9 @@
   // margin: 1rem;
   border-radius: 0.225rem;
   color: $white;
-  background-color: $purple-text-2;
+  // background-color: $purple-text-2;
+  border: 1px solid $purple-hg;
+  background-color: transparent;
 }
 
 .service-card-header{
@@ -78,6 +81,11 @@
 
 .services-desc {
   padding-right: 1rem;
+}
+
+.btn-container {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 
