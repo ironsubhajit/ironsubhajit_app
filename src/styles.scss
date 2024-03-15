@@ -111,4 +111,7 @@ body {
   background: $medium-gray; 
 }
 
-
+// Color for error msgs
+mat-error.error-msg {
+  color: $primary-red;
+}
