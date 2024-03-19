@@ -9,5 +9,9 @@ import { Project } from 'src/app/interfaces/project';
 export class ProjectCardComponent {
   @Input() project: Project | null = null;
 
-  constructor() {}
+  @Input() compProps: any;
+
+  constructor() {
+    
+  }
 }

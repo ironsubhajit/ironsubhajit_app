@@ -1,16 +1,42 @@
-<div class="container mt-2">
+<!-- <div class="container mt-2">
   <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
-    <!-- Looping over the project list -->
-    <div *ngFor="let project of projectList; index as i; trackBy: trackByFn" class="col">
-      <ironsubhajit-project-card [project]="project"></ironsubhajit-project-card>
-    </div>
-
-    
-    <!-- <div class="loading-skeleton">
-      <p-skeleton styleClass="mb-2" width="100%" height="12.5rem"></p-skeleton>
-      <p-skeleton styleClass="mb-2"></p-skeleton>
-      <p-skeleton height="2rem" styleClass="mb-2"></p-skeleton>
-      <p-skeleton width="7rem" height="3rem"></p-skeleton>
-    </div> -->
+    <ng-container *ngIf="!loading; else skeletonContainer">
+      <div
+        *ngFor="let project of projectList; index as i; trackBy: trackByFn"
+        class="col"
+      >
+        <ironsubhajit-project-card
+          [project]="project"
+        ></ironsubhajit-project-card>
+      </div>
+    </ng-container>
+  </div>
+</div> -->
+<div class="container mt-2">
+  <div class="row">
+    <ng-container *ngIf="!loading; else skeletonContainer">
+      <!-- Looping over the project list -->
+      <div
+        *ngFor="let project of projectList; index as i; trackBy: trackByFn"
+        class="row mb-2"
+      >
+        <ironsubhajit-project-card
+          [project]="project"
+        ></ironsubhajit-project-card>
+      </div>
+    </ng-container>
   </div>
 </div>
+
+<!-- Template for skeleton for project card -->
+<ng-template #skeletonContainer>
+  <div
+    *ngFor="let _ of [].constructor(num_of_skeletons); index as i"
+    class="loading-skeleton"
+  >
+    <p-skeleton styleClass="mb-2" width="100%" height="12.5rem"></p-skeleton>
+    <p-skeleton styleClass="mb-2"></p-skeleton>
+    <p-skeleton height="2rem" styleClass="mb-2"></p-skeleton>
+    <p-skeleton width="7rem" height="3rem"></p-skeleton>
+  </div>
+</ng-template>

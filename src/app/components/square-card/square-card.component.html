@@ -1,4 +1,4 @@
-<div class="parent-card" [ngStyle]="parentDivStyle">
+<div (click)="goToLink()" class="parent-card" [ngStyle]="parentDivStyle">
   <div class="titleText">
     <p>{{ cardTitle | titlecase }}</p>
   </div>
