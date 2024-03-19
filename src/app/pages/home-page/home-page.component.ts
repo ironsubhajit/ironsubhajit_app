@@ -54,4 +54,8 @@ export class HomePageComponent {
   trackByFn(index: number, project: Project) {
     return index
   }
+
+  showAlert(): void {
+    alert("Coming Soon: This feature is under development. Stay tuned for updates!")
+  }
 }

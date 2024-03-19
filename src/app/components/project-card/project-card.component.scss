@@ -1,11 +1,108 @@
-@import 'src/colors.scss';
+@import "src/colors.scss";
 
-.card {
-    width: 18rem;
-    background-color: $black;
-    color: $off-white;
+* {
+  transition: all 0.3s ease-in-out;
 }
 
-.card img.card-img-top {
-    height: 12.5rem;
+.parent-card {
+  background-color: $aqua-green-transparent-3;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid $aqua-green;
+  border-radius: 0.225rem;
+  margin: 1rem 0rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.parent-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 4px 4px $aqua-green-transparent-3;
+}
+
+.thumbnail {
+  width: 30%;
+  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  // height: 0;
+  border: 1px solid $aqua-green;
+  border-radius: 0.225rem;
+  background-color: transparent;
+  padding-top: 100%;
+  position: relative; /* Required for absolute positioning */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.circle-container img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-content {
+  width: 70%;
+  height: auto;
+  border-radius: 0.225rem;
+  color: $white;
+  border: 1px solid $aqua-green;
+  background-color: transparent;
+}
+
+.service-card-header {
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  margin: 1rem;
+  margin-top: 0.2rem;
+}
+
+.list-item {
+  margin: 1rem 0;
+  font-weight: 300;
+}
+
+.services-desc {
+  padding-right: 1rem;
+}
+
+.btn-container {
+  margin: 1rem;
+}
+
+// Tablet devices screen sizes
+@media (max-width: 768px) {
+  .parent-card {
+    flex-direction: row; /* Change to column layout on smaller screens */
+    // align-items: center;
+    width: 80%;
+  }
+
+  .thumbnail {
+    width: 100%;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .card-content {
+    display: none;
+  }
+
+  .services-desc {
+    padding-right: 0.5rem;
+  }
 }

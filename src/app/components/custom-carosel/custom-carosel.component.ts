@@ -77,6 +77,9 @@ export class CustomCaroselComponent {
 
   responsiveOptions: any[] | undefined;
 
+  @Input()
+  onClick!: () => void;
+
   constructor() {}
 
   ngOnInit() {

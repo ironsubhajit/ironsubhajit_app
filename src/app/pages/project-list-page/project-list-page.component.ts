@@ -10,17 +10,26 @@ import { ProjectService } from 'src/app/services/project/project.service';
 export class ProjectListPageComponent {
   projectList: Project[] = [];
 
+  loading: boolean = false;
+
+  // Number of skeletons
+  num_of_skeletons: number = 4;
+
   constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
-    this.getProjectList();
+    // this.loading = true;
+    // setTimeout(() => {
+      this.getProjectList();
+    //   this.loading = false;
+    // }, 2000);
   }
 
   getProjectList(): void {
     this.projectList = this.projectService?.getProjects();
   }
-  
+
   trackByFn(index: number, project: Project) {
-    return index
+    return index;
   }
 }

@@ -25,14 +25,17 @@
       >
         <!-- row 1 -->
         <div class="domain-container-row">
+          <!-- Web dev Card -->
           <ironsubhajit-ract-card
             cardTitle="website developement projects"
+            redirectLink="/projects"
             btnText="explore web projects"
             style="width: 60%"
             class="card-margin-right-2 card-margin-bottom-2"
           ></ironsubhajit-ract-card>
           <ironsubhajit-square-card
             cardTitle="java projects"
+            redirectLink="/projects"
             btnText="explore java projects"
             style="width: 40%"
           ></ironsubhajit-square-card>
@@ -41,12 +44,14 @@
         <div class="domain-container-row">
           <ironsubhajit-square-card
             cardTitle="python projects"
+            redirectLink="/projects"
             btnText="explore python projects"
             style="width: 40%"
             class="card-margin-right-2 card-margin-bottom-2"
           ></ironsubhajit-square-card>
           <ironsubhajit-ract-card
             cardTitle="Artificial Intellegence projects"
+            redirectLink="/projects"
             btnText="explore AI projects"
             style="width: 60%"
           ></ironsubhajit-ract-card>
@@ -55,12 +60,14 @@
         <div class="domain-container-row">
           <ironsubhajit-ract-card
             cardTitle="machine learning projects"
+            redirectLink="/projects"
             btnText="explore ml projects"
             style="width: 60%"
             class="card-margin-right-2 card-margin-bottom-2"
           ></ironsubhajit-ract-card>
           <ironsubhajit-square-card
             cardTitle="analytics projects"
+            redirectLink="/projects"
             btnText="explore analytic projects"
             style="width: 40%"
           ></ironsubhajit-square-card>
@@ -70,12 +77,14 @@
       <div style="display: flex; flex-direction: column; width: 28%">
         <ironsubhajit-square-card
           cardTitle="Mobile app projects"
+          redirectLink="/projects"
           btnText="explore mob projects"
           [parentDivStyle]="customHeight"
           class="card-margin-bottom-2"
         ></ironsubhajit-square-card>
         <ironsubhajit-square-card
           cardTitle="consultant projects"
+          redirectLink="/projects"
           btnText="explore consultancy"
         ></ironsubhajit-square-card>
       </div>
@@ -84,7 +93,7 @@
 
   <!-- services -->
   <div>
-    <ironsubhajit-custom-carosel></ironsubhajit-custom-carosel>
+    <ironsubhajit-custom-carosel [onClick]="showAlert"></ironsubhajit-custom-carosel>
   </div>
 
   <!-- Schedule a meeting button -->

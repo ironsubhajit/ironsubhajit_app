@@ -9,5 +9,13 @@ import { Project } from 'src/app/interfaces/project';
 export class ProjectCardComponent {
   @Input() project: Project | null = null;
 
-  constructor() {}
+  @Input() compProps: any;
+
+  showAlert(): void {
+    alert("Coming Soon: This feature is under development. Stay tuned for updates!")
+  }
+
+  constructor() {
+    
+  }
 }
