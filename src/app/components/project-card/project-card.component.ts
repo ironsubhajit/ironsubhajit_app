@@ -11,6 +11,10 @@ export class ProjectCardComponent {
 
   @Input() compProps: any;
 
+  showAlert(): void {
+    alert("Coming Soon: This feature is under development. Stay tuned for updates!")
+  }
+
   constructor() {
     
   }

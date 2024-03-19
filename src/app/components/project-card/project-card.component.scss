@@ -81,8 +81,7 @@
 }
 
 .btn-container {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 1rem;
 }
 
 // Tablet devices screen sizes
@@ -98,14 +97,6 @@
     margin-right: 0 !important;
     margin-top: 0 !important;
   }
-
-  // .thumbnail {
-  //   display: none;
-  // }
-
-  // .circle-container img {
-  //   display: none;
-  // }
 
   .card-content {
     display: none;
