@@ -5,8 +5,8 @@
 }
 
 .parent-card {
-  // background-color: $purple-hg;
-  background-color: $purple-dark;
+  // background-color: $purple-dark;
+  background: linear-gradient(25deg, $purple-dark,$purple-dark3);
   width: 100%;
   height: auto;
   display: flex;
@@ -56,9 +56,9 @@
   width: 70%;
   height: auto;
   border-radius: 0.225rem;
-  color: $white;
+  color: $off-white;
   // background-color: $purple-text-2;
-  border: 1px solid $purple-hg;
+  // border: 1px solid $purple-hg;
   background-color: transparent;
 }
 
