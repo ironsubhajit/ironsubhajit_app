@@ -66,7 +66,7 @@
   .p-dialog-header-close {
     color: $off-white;
   }
-  
+
   .p-dialog-header-close:hover {
     background-color: transparent;
   }
@@ -86,4 +86,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+// Mobile devices screen sizes
+@media (max-width: 580px) {
+  :host ::ng-deep {
+    .p-dialog {
+      width: 85vw;
+    }
+
+    .p-dialog-title {
+      justify-content: flex-start;
+      margin-left: 1rem;
+    }
+  }
 }
