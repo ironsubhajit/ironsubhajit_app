@@ -66,7 +66,7 @@ export class CustomInputComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("Loading value => ", this.loading)
+    // console.log("Loading value => ", this.loading)
     // console.log("formcontrol value => ", this.formControlFieldName.value)
   }
 }

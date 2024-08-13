@@ -8,7 +8,7 @@ import { ProjectService } from 'src/app/services/project/project.service';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent {
-  projectList: Project[] = [];
+  projectList!: any;
 
   screenWidth!: number;
   customHeight!: { [key: string]: string };
@@ -22,7 +22,7 @@ export class HomePageComponent {
   }
 
   ngOnInit(): void {
-    this.getProjectList();
+    // this.getProjectList();
     this.adjustWidth();
   }
 

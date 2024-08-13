@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Project } from 'src/app/interfaces/project';
 import { ProjectService } from 'src/app/services/project/project.service';
 
@@ -7,8 +8,8 @@ import { ProjectService } from 'src/app/services/project/project.service';
   templateUrl: './project-list-page.component.html',
   styleUrls: ['./project-list-page.component.scss'],
 })
-export class ProjectListPageComponent {
-  projectList: Project[] = [];
+export class ProjectListPageComponent implements OnInit{
+  projectList!: any;
 
   loading: boolean = false;
 
@@ -18,15 +19,24 @@ export class ProjectListPageComponent {
   constructor(private projectService: ProjectService) {}
 
   ngOnInit(): void {
-    // this.loading = true;
-    // setTimeout(() => {
-      this.getProjectList();
-    //   this.loading = false;
-    // }, 2000);
+    this.getProjectList();
   }
 
   getProjectList(): void {
-    this.projectList = this.projectService?.getProjects();
+    // Method to fetch list of projects
+    this.loading = true;
+    this.projectService?.getProjects().subscribe({
+      next: (res) => {
+        this.projectList = res;
+      },
+      error: (err) => {
+        console.error('Error occured: ', err);
+        this.loading = false;
+      },
+      complete: () => {
+        this.loading = false;
+      },
+    });
   }
 
   trackByFn(index: number, project: Project) {

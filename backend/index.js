@@ -17,7 +17,19 @@ const app = express();
 
 // MIDDLEWARE
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:4200" }));
+
+// reecoded origin hosts 
+const corsOptions = {
+  origin: [
+    "http://localhost:4200",
+    "https://reecoded-b8007.web.app",
+    "https://reecoded-b8007.firebaseapp.com",
+    "https://reecoded.com",
+    "https://www.reecoded.com",
+  ],
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use("/project", projectRoute);
 
@@ -27,7 +39,7 @@ app.get("/", (req, res) => {
 });
 
 // SERVER LISTEN ON PORT
-const port = 3000;  
+const port = 3000;
 app.listen(port, () => {
   console.log(`Server started at port : ${port}`);
 });
